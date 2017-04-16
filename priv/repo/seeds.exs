@@ -9,3 +9,17 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Graph13.Blog.{User, Post}
+alias Graph13.Repo
+
+Repo.insert!(%User{name: "Bob the Builder", email: "bob@canwefix.it"})
+Repo.insert!(%User{name: "Luke Skywalker", email: "luke@thejedimuste.nd"})
+
+for _ <- 1..10 do
+  Repo.insert(%Post{
+    title: Faker.Lorem.sentence,
+    body: Faker.Lorem.paragraphs(%Range{first: 1, last: 3}) |> Enum.join("\n\n"),
+    user_id: [1, 2] |> Enum.take_random(1) |> hd
+  })
+end

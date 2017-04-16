@@ -4,7 +4,7 @@ defmodule Graph13.Blog.User do
   schema "blog_users" do
     field :email, :string
     field :name, :string
-    has_many :posts, Graph13.Blog.Post
+    has_many :blog_posts, Graph13.Blog.Post, foreign_key: :blog_users_id
 
     timestamps()
   end

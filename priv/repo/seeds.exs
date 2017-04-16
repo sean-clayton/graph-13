@@ -20,6 +20,6 @@ for _ <- 1..10 do
   Repo.insert(%Post{
     title: Faker.Lorem.sentence,
     body: Faker.Lorem.paragraphs(%Range{first: 1, last: 3}) |> Enum.join("\n\n"),
-    user_id: [1, 2] |> Enum.take_random(1) |> hd
+    blog_users_id: [1, 2] |> Enum.take_random(1) |> hd
   })
 end

@@ -7,6 +7,7 @@ defmodule Graph13.Web.Router do
 
   scope "/api", Graph13.Web do
     resources "/users", UserController, except: [:new, :edit]
+    resources "/posts", PostController, except: [:new, :edit]
     pipe_through :api
   end
 end

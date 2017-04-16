@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :graph_13, Graph13.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "Postgres1234",
   database: "graph_13_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

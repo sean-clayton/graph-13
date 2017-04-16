@@ -40,7 +40,7 @@ config :phoenix, :stacktrace_depth, 20
 config :graph_13, Graph13.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "Postgres1234",
   database: "graph_13_dev",
   hostname: "localhost",
   pool_size: 10
